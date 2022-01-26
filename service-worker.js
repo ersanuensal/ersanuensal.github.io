@@ -1,13 +1,13 @@
 console.log('Hello from service-worker.js');
 
-// self.addEventListener('install', function (event) {
-//     event.waitUntil(
-//       caches.open('my-cache-v1')
-//         .then(function (cache) {
-//           return cache.addAll(['/', '/styles/main.css', '/scripts/main.js']);
-//         })
-//     );
-//   });
+self.addEventListener('install', function (event) {
+    event.waitUntil(
+      caches.open('my-cache-v1')
+        .then(function (cache) {
+          return cache.addAll(['/']);
+        })
+    );
+  });
 
   function isSuccessful(response) {
     return response &&
