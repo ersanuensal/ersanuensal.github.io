@@ -1,15 +1,21 @@
 console.log('Hello from service-worker.js');
 
-self.addEventListener('install', function (event) {
-    event.waitUntil(
-      caches.open('my-cache-v1')
-        .then(function (cache) {
-          return cache.addAll([
-            '/*'
-          ]);
-        })
-    );
-  });
+const KEY = 'key';
+
+self.addEventListener('install', (event) => {
+    event.waitUntil(self.skipWaiting());
+});
+
+self.addEventListener('message', (event) => {
+    if (event.data.type === 'CACHE_URLS') {
+        event.waitUntil(
+            caches.open(KEY)
+                .then( (cache) => {
+                    return cache.addAll(event.data.payload);
+                })
+        );
+    }
+});
 
   function isSuccessful(response) {
     return response &&
