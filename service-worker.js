@@ -1,13 +1,26 @@
 console.log('Hello from service-worker.js');
 
-// self.addEventListener('install', function (event) {
-//     event.waitUntil(
-//       caches.open('my-cache-v1')
-//         .then(function (cache) {
-//           return cache.addAll(['/', '/index.html', 'service-worker.js', 'site.webmanifest']);
-//         })
-//     );
-//   });
+self.addEventListener('install', function (event) {
+    event.waitUntil(
+      caches.open('my-cache-v1')
+        .then(function (cache) {
+          return cache.addAll([
+            '/',
+            '/index.html',
+            '/assets/',
+            '/assets/*',
+            '/img/',
+            '/img/*',
+            '/favicon.ico',
+            '/service-worker.js',
+            '/site.webmanifest',
+            'robots.txt',
+            'pwa-192-192.png',
+            'pwa-512-512.png',
+          ]);
+        })
+    );
+  });
 
   function isSuccessful(response) {
     return response &&
