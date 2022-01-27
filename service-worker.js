@@ -4,7 +4,7 @@ self.addEventListener('install', function (event) {
     event.waitUntil(
       caches.open('my-cache-v1')
         .then(function (cache) {
-          return cache.addAll(['/', '/index.html', 'service-worker.js']);
+          return cache.addAll(['/', '/index.html', 'service-worker.js', 'site.webmanifest']);
         })
     );
   });
