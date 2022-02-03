@@ -1,0 +1,11 @@
+<p>Current permission status is <b id="status">unavailable</b>.</p>
+
+<p><button onclick="requestPermission()">Request permission</button></p>
+<p><button onclick="nonPersistentNotification()">Non-persistent notification</button></p>
+<p><button onclick="persistentNotification()">Persistent notification</button></p>
+
+<p><button onclick="startDetector()">Start idle detection</button></p>
+<p>Stop your activity for 60 seconds and/or block the screen to record the idle state changes.</p>
+<div id="target"></div>
+
+<script src="js/app.js"></script>
