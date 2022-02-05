@@ -1,3 +1,4 @@
+// Registration of the Service Worker
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', function () {
         navigator.serviceWorker.register('/serviceWorker.js').then(function (registration) {
@@ -9,3 +10,12 @@ if ('serviceWorker' in navigator) {
         });
     });
 }
+
+let myObj = {
+    name: 'John',
+    age: 30,
+    city: 'New York'
+};
+
+localStorage.setItem('myObj', JSON.stringify(myObj));
+console.log(localStorage)
