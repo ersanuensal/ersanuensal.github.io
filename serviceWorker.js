@@ -1,6 +1,4 @@
-console.log("Service Worker v1 is running.");
-
-var CACHE_NAME = 'my-site-cache-v1';
+var CACHE_NAME = 'my-site-cache-v2';
 var urlsToCache = [
     '/',
     '/css/styles.css',
@@ -11,6 +9,9 @@ var urlsToCache = [
     'images/icons/icon-512x512.png',
 
 ];
+
+console.log("Service Worker with " + CACHE_NAME + " is running.");
+
 
 self.addEventListener('install', function (event) {
     // Perform install steps
@@ -56,7 +57,7 @@ self.addEventListener('fetch', function (event) {
 
 self.addEventListener('activate', function (event) {
 
-    var cacheAllowlist = ['my-site-cache-v1', 'blog-posts-cache-v1'];
+    var cacheAllowlist = ['my-site-cache-v2', 'blog-posts-cache-v1'];
 
     event.waitUntil(
         caches.keys().then(function (cacheNames) {
