@@ -1,4 +1,4 @@
-var CACHE_NAME = 'version-1.5';
+var CACHE_NAME = 'version-1.0';
 
 
 var urlsToCache = [
@@ -59,14 +59,13 @@ self.addEventListener('fetch', function (event) {
 
 self.addEventListener('activate', function (event) {
 
-    var cacheAllowlist = ['version-1.5'];
+    var cacheAllowlist = ['version-1.0'];
 
     event.waitUntil(
         caches.keys().then(function (cacheNames) {
             return Promise.all(
                 cacheNames.map(function (cacheName) {
                     if (cacheAllowlist.indexOf(cacheName) === -1) {
-                        localStorage.clear();
                         return caches.delete(cacheName);
                     }
                 })
