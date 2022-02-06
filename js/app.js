@@ -40,6 +40,7 @@ function getData() {
 
 function deleteData() {
     localStorage.clear();
+    showData();
 }
 
 function showData() {
