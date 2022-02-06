@@ -14,7 +14,7 @@
     <div>
         <!-- Create a Table from Local Storage -->
         <h1>Kostentabelle</h1>
-        <table>
+        <table id="costTable">
             <thead>
                 <tr>
                     <th>Beschreibung</th>
@@ -25,12 +25,11 @@
                 </tr>
             </thead>
             <tbody>
-                <form action="createEntry()">
-                    <input type="text" name="description" placeholder="Beschreibung">
-                    <input type="date" name="date" placeholder="Datum">
-                    <input type="text" name="category" placeholder="Kategorie">
-                    <input type="number" name="value" placeholder="Wert der Transaktion">
-                    <input type="number" name="total" placeholder="Gesamtsumme">
+                <form onsubmit="createEntry(); return false;">
+                    <input type="text" name="description" id="description" placeholder="Beschreibung">
+                    <input type="date" name="date" id="date" placeholder="Datum">
+                    <input type="text" name="category" id="category" placeholder="Kategorie">
+                    <input type="number" name="value" id="value" placeholder="Wert der Transaktion">
                     <button>Hinzufügen</button>
                 </form>
     </div>
