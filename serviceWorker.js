@@ -1,4 +1,4 @@
-var CACHE_NAME = 'version-1.1';
+var CACHE_NAME = 'version-1.2';
 console.log('Cache Version: ' + CACHE_NAME);
 var urlsToCache = [
     '/',
@@ -58,7 +58,7 @@ self.addEventListener('fetch', function (event) {
 
 self.addEventListener('activate', function (event) {
 
-    var cacheAllowlist = ['version-1.1'];
+    var cacheAllowlist = ['version-1.2'];
 
     event.waitUntil(
         caches.keys().then(function (cacheNames) {
