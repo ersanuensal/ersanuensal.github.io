@@ -33,7 +33,7 @@ function addData() {
     });
 
     localStorage.setItem('localData', JSON.stringify(data));
-
+    showData();
     console.log("New Item added");
 }
 
