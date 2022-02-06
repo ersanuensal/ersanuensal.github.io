@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="manifest" href="manifest.json">
     <title>Kostentabelle</title>
 </head>
@@ -14,24 +14,44 @@
     <div>
         <!-- Create a Table from Local Storage -->
         <h1>Kostentabelle</h1>
-        <table id="costTable">
-            <thead>
-                <tr>
-                    <th>Beschreibung</th>
-                    <th>Datum</th>
-                    <th>Kategorie</th>
-                    <th>Wert der Transaktion</th>
-                    <th>Gesamtsumme</th>
-                </tr>
-            </thead>
-            <tbody>
-                <form onsubmit="addData(); return false;">
-                    <input type="text" name="description" id="description" placeholder="Beschreibung">
-                    <input type="date" name="date" id="date" placeholder="Datum">
-                    <input type="text" name="category" id="category" placeholder="Kategorie">
-                    <input type="number" name="value" id="value" placeholder="Wert der Transaktion">
-                    <button type="submit">Hinzufügen</button>
-                </form>
+        <div id="wrapper">
+            <div id="div1">
+                <div class="table-wrapper">
+                    <table id="costTable" class="fl-table">
+                        <thead>
+                            <tr>
+                                <th>Beschreibung</th>
+                                <th>Datum</th>
+                                <th>Kategorie</th>
+                                <th>Wert der Transaktion</th>
+                                <th>Gesamtsumme</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="div2">
+                <div>
+                    <form onsubmit="addData(); return false;">
+                        <label for="description">Beschreibung:</label>
+                        <input type="text" name="description" id="description">
+
+                        <label for="date">Datum:</label>
+                        <input type="date" name="date" id="date">
+
+                        <label for="category">Kategorie:</label>
+                        <input type="text" name="category" id="category">
+
+                        <label for="value">Wert der Transaktion:</label>
+                        <input type="number" name="value" id="value">
+
+                        <button type="submit">Hinzufügen</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
 
 

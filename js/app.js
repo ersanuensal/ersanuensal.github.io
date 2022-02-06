@@ -32,7 +32,7 @@ function addData() {
         value: document.getElementById('value').value
     });
 
-    localStorage.setItem('localData', JSON.stringify(data));
+    localStorage.setItem('localData', JSON.stringify(costList));
     showData();
     console.log("New Item added");
 }
@@ -52,7 +52,16 @@ function deleteData() {
 function showData() {
     getData();
 
+
     var table = document.getElementById('costTable');
+
+    var tableLength = table.rows.length;
+
+    while (--tableLength) {
+        table.deleteRow(tableLength);
+    }
+
+    var sum = 0;
 
     costList.forEach(element => {
         var row = table.insertRow();
@@ -62,10 +71,16 @@ function showData() {
         var cell4 = row.insertCell();
         var cell5 = row.insertCell();
 
+        // Add costs to sum
+        value = parseInt(element.value);
+        sum = sum + value;
+
         cell1.innerHTML = element.description;
-        cell2.innerHTML = element.date;
+        cell2.innerHTML = new Date(element.date).toLocaleDateString();
         cell3.innerHTML = element.category;
-        cell4.innerHTML = element.value;
-        cell5.innerHTML = element.value;
+        cell4.innerHTML = element.value + " €";
+        cell5.innerHTML = sum + " €";
     });
 }
+
+showData();
