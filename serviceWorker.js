@@ -1,5 +1,5 @@
 var CACHE_NAME = 'version-1.1';
-document.getElementById('version').innerHTML = CACHE_NAME;
+console.log('Cache Version: ' + CACHE_NAME);
 var urlsToCache = [
     '/',
     '/css/styles.css',
