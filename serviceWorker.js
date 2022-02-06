@@ -1,4 +1,4 @@
-var CACHE_NAME = 'version-2.7';
+var CACHE_NAME = 'version-final';
 
 
 var urlsToCache = [
@@ -9,6 +9,30 @@ var urlsToCache = [
     'manifest.json',
     'images/icons/icon-192x192.png',
     'images/icons/icon-512x512.png',
+    '/pwa-1/',
+    '/pwa-1/index.html',
+    '/pwa-1/css/styles.css',
+    '/pwa-1/js/app.js',
+    '/pwa-1/manifest.json',
+    '/pwa-1/images/icons/icon-192x192.png',
+    '/pwa-1/images/icons/icon-512x512.png',
+    '/pwa-2/',
+    '/pwa-2/index.html',
+    '/pwa-2/css/styles.css',
+    '/pwa-2/js/app.js',
+    '/pwa-3/',
+    '/pwa-3/index.html',
+    '/pwa-3/css/styles.css',
+    '/pwa-3/js/app.js',
+    '/pwa-4/',
+    '/pwa-4/index.html',
+    '/pwa-4/css/styles.css',
+    '/pwa-4/js/app.js',
+    '/pwa-5/',
+    '/pwa-5/index.html',
+    '/pwa-5/css/styles.css',
+    '/pwa-5/js/app.js',
+
 
 ];
 
@@ -59,7 +83,7 @@ self.addEventListener('fetch', function (event) {
 
 self.addEventListener('activate', function (event) {
 
-    var cacheAllowlist = ['version-2.7'];
+    var cacheAllowlist = ['version-final'];
 
     event.waitUntil(
         caches.keys().then(function (cacheNames) {
