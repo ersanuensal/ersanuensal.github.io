@@ -65,7 +65,7 @@ self.addEventListener('activate', function (event) {
             return Promise.all(
                 cacheNames.map(function (cacheName) {
                     if (cacheAllowlist.indexOf(cacheName) === -1) {
-                        return caches.delete(cacheName);
+                        return caches.delete(cacheName), localStorage.clear();
                     }
                 })
             );
