@@ -6,6 +6,40 @@
   box-sizing: border-box;
 }
 
+.element {
+  text-align: center;
+  height: 300px;
+  max-width: 100%;
+  margin: auto;
+  padding: 0.5rem;
+
+}
+
+.columns {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.column {
+  flex: 1;
+  max-width: 100%;
+  margin: 0.5rem;
+}
+
+button {
+  border: none;
+  background: blue;
+  color: white;
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 8px;
+}
+
 body {
   background: #fdfdfd;
   font-family: "Nunito", sans-serif;

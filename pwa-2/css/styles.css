@@ -11,7 +11,43 @@ body {
   font-family: "Nunito", sans-serif;
   font-size: 1rem;
   text-align: center;
+
 }
+
+
+.element {
+
+  max-width: 100%;
+  margin: auto;
+  padding: 0.5rem;
+
+}
+
+video {
+  border: blue solid 1px;
+  background-color: rgb(235, 231, 231);
+  width: 400px;
+  height: 300px;
+}
+
+img {
+  border: blue solid 1px;
+  background-color: rgb(235, 231, 231);
+  width: 400px;
+  height: 300px;
+}
+
+button {
+  border: none;
+  background: blue;
+  color: white;
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 8px;
+}
+
 
 main {
   max-width: 900px;
