@@ -1,5 +1,6 @@
 var CACHE_NAME = 'version-1.5';
-console.log('Cache Version: ' + CACHE_NAME);
+
+
 var urlsToCache = [
     '/',
     '/css/styles.css',
