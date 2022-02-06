@@ -38,10 +38,7 @@ function getData() {
     }
 }
 
-function deleteData() {
-    localStorage.clear();
-    showData();
-}
+
 
 function showData() {
     getData();
@@ -76,6 +73,11 @@ function showData() {
         cell4.innerHTML = element.value + " €";
         cell5.innerHTML = sum.toFixed(2) + " €";
     });
+}
+
+function deleteData() {
+    localStorage.clear();
+    showData();
 }
 
 showData();
