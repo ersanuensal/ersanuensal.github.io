@@ -72,14 +72,15 @@ function showData() {
         var cell5 = row.insertCell();
 
         // Add costs to sum
-        value = parseInt(element.value);
+        rawValue = element.value
+        value = parseFloat(rawValue.replace(',', '.'));
         sum = sum + value;
 
         cell1.innerHTML = element.description;
         cell2.innerHTML = new Date(element.date).toLocaleDateString();
         cell3.innerHTML = element.category;
         cell4.innerHTML = element.value + " €";
-        cell5.innerHTML = sum + " €";
+        cell5.innerHTML = sum.toFixed(2) + " €";
     });
 }
 
