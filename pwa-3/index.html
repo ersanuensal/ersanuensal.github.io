@@ -1,30 +1,53 @@
-<button id="askButton">Ask for location</button>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>PWA 3</title>
+</head>
 
-<table>
-    <tr>
-        <td>API used</td>
-        <td id="moApi"></td>
-    </tr>
-    <tr>
-        <td>linear acceleration (excl. gravity)</td>
-        <td id="moAccel"></td>
-    </tr>
-    <tr>
-        <td>acceleration incl. gravity</td>
-        <td id="moAccelGrav"></td>
-    </tr>
-    <tr>
-        <td>rotation rate</td>
-        <td id="moRotation"></td>
-    </tr>
-    <tr>
-        <td>interval (ms)</td>
-        <td id="moInterval"></td>
-    </tr>
-</table>
 
-<p><small>Demo based on <a href="https://www.html5rocks.com/en/tutorials/device/orientation/" target="_blank"
-            rel="noopener">HTML5 Rocks</a> article.</small></p>
+<body>
+    <div class="topnav">
+        <a href="/">Kostentabelle</a>
+        <a href="/pwa-1/">Dev's Coffe</a>
+        <a href="/pwa-2/">PWA 2</a>
+        <a class="active" href="/pwa-3/">PWA 3</a>
+        <a href="/pwa-4/">PWA 4</a>
+        <a href="/pwa-5/">PWA 5</a>
+    </div>
 
-<div id="target"></div>
-<script src="js/app.js"></script>
+    <div>
+
+        <button id="askButton">Ask for location</button>
+
+        <table>
+            <tr>
+                <td>API used</td>
+                <td id="moApi"></td>
+            </tr>
+            <tr>
+                <td>linear acceleration (excl. gravity)</td>
+                <td id="moAccel"></td>
+            </tr>
+            <tr>
+                <td>acceleration incl. gravity</td>
+                <td id="moAccelGrav"></td>
+            </tr>
+            <tr>
+                <td>rotation rate</td>
+                <td id="moRotation"></td>
+            </tr>
+            <tr>
+                <td>interval (ms)</td>
+                <td id="moInterval"></td>
+            </tr>
+        </table>
+
+        <p><small>Demo based on <a href="https://www.html5rocks.com/en/tutorials/device/orientation/" target="_blank"
+                    rel="noopener">HTML5 Rocks</a> article.</small></p>
+
+        <div id="target"></div>
+        <script src="js/app.js"></script>
+    </div>
+</body>

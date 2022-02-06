@@ -1,10 +1,28 @@
-<video autoplay style="height:180px; width: 240px;"
-    poster="https://image.freepik.com/free-icon/video-camera-symbol_318-40225.png"></video>
-<p><button onclick="getStream()">Grab video & start recording</button></p>
-<p><button onclick="download()">Download!</button></p>
-<p><button onclick="takePhoto()">Take Photo!</button></p>
-<p><img id="imageTag" width="240" height="180"></p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>PWA 2</title>
+</head>
 
-<p><small>Demo by <a href="http://www.mcasas.tk/" target="_blank" rel="noopener">Miguel Casas-Sanchez</a>.</small></p>
+<body>
+    <div class="topnav">
+        <a href="/">Kostentabelle</a>
+        <a href="/pwa-1/">Dev's Coffe</a>
+        <a class="active" href="/pwa-2/">PWA 2</a>
+        <a href="/pwa-3/">PWA 3</a>
+        <a href="/pwa-4/">PWA 4</a>
+        <a href="/pwa-5/">PWA 5</a>
+    </div>
 
-<script src="js/app.js"></script>
+    <div>
+        <video autoplay style="height:180px; width: 240px;"
+            poster="https://image.freepik.com/free-icon/video-camera-symbol_318-40225.png"></video>
+        <p><button onclick="getStream()">Grab video & start recording</button></p>
+        <p><button onclick="download()">Download!</button></p>
+        <p><button onclick="takePhoto()">Take Photo!</button></p>
+        <p><img id="imageTag" width="240" height="180"></p>
+        <script src="js/app.js"></script>
+    </div>
+</body>
