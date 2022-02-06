@@ -14,7 +14,7 @@
     <div>
         <!-- Create a Table from Local Storage -->
         <h1>Kostentabelle</h1>
-        <button onclick="deleteData()">Liste leeren</button>
+
         <p id="version"></p>
         <div id="wrapper">
             <div id="div1">
@@ -35,6 +35,7 @@
                 </div>
             </div>
             <div id="div2">
+                <button onclick="deleteData()" style="margin: auto; margin-left: 37%;">Liste leeren</button>
                 <div>
                     <form onsubmit="addData(); return false;">
                         <label for="description">Beschreibung:</label>

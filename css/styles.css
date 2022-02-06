@@ -40,11 +40,12 @@ button {
     font-size: 18px;
     margin-top: 15px;
     padding: 10px;
-    width: 100%;
     background: #b40d29;
     border: 0;
     color: white;
     border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
 }
 
 form {
@@ -88,6 +89,7 @@ form button {
     border: 0;
     color: white;
     border-radius: 8px;
+    cursor: pointer;
 }
 
 
