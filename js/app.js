@@ -11,14 +11,7 @@ if ('serviceWorker' in navigator) {
     });
 }
 
-// let myObj = {
-//     name: 'John',
-//     age: 30,
-//     city: 'New York'
-// };
 
-// localStorage.setItem('myObj', JSON.stringify(myObj));
-// console.log(localStorage)
 var costList = new Array();
 
 
