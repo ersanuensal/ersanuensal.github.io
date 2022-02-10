@@ -1,4 +1,4 @@
-var CACHE_NAME = 'version-final';
+var CACHE_NAME = 'version-final-1';
 
 
 var urlsToCache = [
@@ -83,7 +83,7 @@ self.addEventListener('fetch', function (event) {
 
 self.addEventListener('activate', function (event) {
 
-    var cacheAllowlist = ['version-final'];
+    var cacheAllowlist = ['version-final-1'];
 
     event.waitUntil(
         caches.keys().then(function (cacheNames) {
