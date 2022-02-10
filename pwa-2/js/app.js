@@ -97,3 +97,33 @@ function takePhoto() {
         })
         .catch(err => alert('Error: ' + err));
 }
+
+function saveImgToGallery() {
+    imageToSave = document.getElementById("imageTag");
+    var img64 = getBase64Image(imageToSave);
+
+
+    localStorage.setItem("img64", img64);
+
+}
+
+function getBase64Image(img) {
+    var canvas = document.createElement("canvas");
+    canvas.width = 400;
+    canvas.height = 300;
+
+    var ctx = canvas.getContext("2d");
+    ctx.drawImage(img, 0, 0, 400, 300);
+
+    var dataURL = canvas.toDataURL("image/png");
+
+    return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
+}
+
+var dataImage = localStorage.getItem('img64');
+imgLoad = document.getElementById("imageTag");
+if (dataImage != null) {
+    imgLoad.src = "data:image/png;base64," + dataImage;
+} else {
+    imgLoad.src = "img/no-image.png";
+}
